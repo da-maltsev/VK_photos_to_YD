@@ -40,7 +40,7 @@ class UserService:
         profile_list = response.json()
 
         for file in tqdm(profile_list['response']['items']):
-            time.sleep(4)
+            time.sleep(2)
             self.size = file['sizes'][-1]['type']
             photo_url = file['sizes'][-1]['url']
             file_name = file['likes']['count']
