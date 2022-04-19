@@ -60,7 +60,7 @@ class UserService:
         logs_list = []
 
         for photo in tqdm(self._get_photos_from_folder()):
-            time.sleep(4)
+            time.sleep(2)
             params = {'path': f'{self.file_path}/{photo}'}
             get_upload_url = requests.get(self.get_upload_url_api, headers=headers, params=params)
             get_url = get_upload_url.json()
